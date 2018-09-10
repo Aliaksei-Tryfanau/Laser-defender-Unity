@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy info")]
     [SerializeField]
     float health = 100f;
+
+    [Header("Enemy shooting")]
     [SerializeField]
     float shotCounter;
     [SerializeField]
@@ -16,6 +19,20 @@ public class Enemy : MonoBehaviour
     GameObject projectile;
     [SerializeField]
     float projectileSpeed = 10f;
+
+    [Header("Enemy VFX and SFX")]
+    [SerializeField]
+    GameObject deathVFX;
+    [SerializeField]
+    float durationOfExplosion;
+    [SerializeField]
+    AudioClip deathSound;
+    [SerializeField]
+    AudioClip shootSound;
+    [SerializeField] [Range(0,1)]
+    float deathSoundVolume = 0.75f;
+    [SerializeField] [Range(0, 1)]
+    float shootSoundVolume = 0.25f;
 
     // Use this for initialization
     void Start()
@@ -42,6 +59,7 @@ public class Enemy : MonoBehaviour
     private void Fire()
     {
         GameObject laser = Instantiate(projectile, transform.position, Quaternion.identity);
+        AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position, shootSoundVolume);
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);
     }
 
@@ -57,7 +75,15 @@ public class Enemy : MonoBehaviour
         damageDealer.Hit();
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        GameObject expolosion = Instantiate(deathVFX, transform.position, transform.rotation);
+        Destroy(expolosion, durationOfExplosion);
+        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
     }
 }
