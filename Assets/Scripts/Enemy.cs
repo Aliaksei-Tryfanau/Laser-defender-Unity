@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [Header("Enemy info")]
+    [Header("Enemy Stats")]
     [SerializeField]
     float health = 100f;
+    [SerializeField]
+    int scoreValue = 150;
 
     [Header("Enemy shooting")]
     [SerializeField]
@@ -81,6 +83,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
         Destroy(gameObject);
         GameObject expolosion = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(expolosion, durationOfExplosion);

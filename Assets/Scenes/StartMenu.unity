@@ -223,6 +223,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a89b4aee410ab9244a49ce80a072f314, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &925917639
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4934939146561908, guid: 130b8144f7ae40941ad5417f97b6af7a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934939146561908, guid: 130b8144f7ae40941ad5417f97b6af7a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934939146561908, guid: 130b8144f7ae40941ad5417f97b6af7a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934939146561908, guid: 130b8144f7ae40941ad5417f97b6af7a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934939146561908, guid: 130b8144f7ae40941ad5417f97b6af7a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934939146561908, guid: 130b8144f7ae40941ad5417f97b6af7a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934939146561908, guid: 130b8144f7ae40941ad5417f97b6af7a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934939146561908, guid: 130b8144f7ae40941ad5417f97b6af7a, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 130b8144f7ae40941ad5417f97b6af7a, type: 2}
+  m_IsPrefabParent: 0
 --- !u!114 &931130050 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114807878727472408, guid: dbf5ad942017c174cabe639051bc3b2f,
