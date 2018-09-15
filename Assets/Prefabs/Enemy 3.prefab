@@ -21,12 +21,12 @@ GameObject:
   - component: {fileID: 4724651452413186}
   - component: {fileID: 212395826027675468}
   - component: {fileID: 114317614790287584}
-  - component: {fileID: 114395109014604482}
-  - component: {fileID: 58931498991851606}
-  - component: {fileID: 50339999202068262}
-  - component: {fileID: 114377094421762066}
+  - component: {fileID: 114352390616385034}
+  - component: {fileID: 58312535370355476}
+  - component: {fileID: 50065837425409226}
+  - component: {fileID: 114066424303554776}
   m_Layer: 9
-  m_Name: Enemy 1
+  m_Name: Enemy 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50339999202068262
+--- !u!50 &50065837425409226
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -65,7 +65,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58931498991851606
+--- !u!58 &58312535370355476
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -79,7 +79,19 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.465
+  m_Radius: 0.42
+--- !u!114 &114066424303554776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1686888507706470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c584ccca9a8d83a449b05f24ea1f6d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 200
 --- !u!114 &114317614790287584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,19 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04fcd6c6ddf7a0f4f85a705d860f171b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114377094421762066
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1686888507706470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c584ccca9a8d83a449b05f24ea1f6d86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
---- !u!114 &114395109014604482
+--- !u!114 &114352390616385034
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -114,16 +114,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb94ff473f2e0984e933322eb1849020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
-  scoreValue: 150
-  minTimeBetweenShots: 0.2
+  health: 1000
+  scoreValue: 300
+  minTimeBetweenShots: 2
   maxTimeBetweenShots: 3
-  projectile: {fileID: 1876425811306852, guid: 1fd3e05b5418f3843aef559ab4c81811, type: 2}
-  projectileSpeed: 10
+  projectile: {fileID: 1876425811306852, guid: e0f0896b0cfad3042b2f5ff5489cecc2, type: 2}
+  projectileSpeed: 2
   deathVFX: {fileID: 1021210547134566, guid: 1c13057f579675e4d8fe882408f257ec, type: 2}
   durationOfExplosion: 1
   deathSound: {fileID: 8300000, guid: d9bf36bb0046d7c41827cf95c3b4c2fc, type: 3}
-  shootSound: {fileID: 8300000, guid: d4e7922762dd6be48a8eafdf489c2afd, type: 3}
+  shootSound: {fileID: 8300000, guid: 6c7cfe9099f8b6a499d7a34bdace6cf9, type: 3}
   deathSoundVolume: 0.75
   shootSoundVolume: 0.5
 --- !u!212 &212395826027675468
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 6336eb59f931f3749949e2bc98e5a80d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 265d9f3d5bffda24d8b3c6e1b67c6240, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

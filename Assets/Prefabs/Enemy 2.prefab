@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c584ccca9a8d83a449b05f24ea1f6d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 200
+  damage: 100
 --- !u!114 &114317614790287584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 600
-  shotCounter: 2
+  scoreValue: 150
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   projectile: {fileID: 1876425811306852, guid: b349b17467dffb74789bfe28e7433d7e, type: 2}
